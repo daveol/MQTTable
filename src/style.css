@@ -1,0 +1,59 @@
+body {
+	color: lightgrey;
+	background-color: black;
+	font-family:'DejaVu Sans Mono','Bitstream Vera Mono',Consolas,courier;
+}
+
+
+tr:nth-child(odd){
+	background-color: #444;
+	color: lightgrey;
+}
+
+tr:nth-child(even){
+	background-color: black;
+	color: lightgrey;
+}
+
+
+td:nth-child(odd){
+	padding-right: 20px;
+}
+
+table {
+	border-spacing:0;
+	border-collapse: collapse;
+}
+
+input[type="text"] {
+	border: none;
+	outline: none;
+	color: inherit;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.change {
+	color: lime;
+}
+
+.change-remove {
+	color: lightgrey;
+	transition: all 1s;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.change-add-active {
+	color: lime;
+}
+
+.change-remove {
+	color: lime;
+}
+
+.change-remove-active {
+	color: lightgrey;
+}

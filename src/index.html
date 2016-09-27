@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Revspace MQTT</title>
+  <meta name="description" content="Revspace live MQTT table" />
+  <meta name="keywords" content="revspace,power,live,stats,temperature,mqtt" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <h1>MQTTable</h1>
+  <div ng-app="MQTTable" ng-controller="TableController">
+    <label>Search: <input ng-model="Search" type="text" autofocus/></label>
+    <table>
+        <tr ng-repeat="(topic,value) in values | Object:Search">
+              <td>{{ topic }}</td>
+              <td animate-on-change="value">{{ value }}</td>
+        </tr>
+    </table>
+  </div>
+  <div id="resources">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </div>
+</body>
+
+</html>
